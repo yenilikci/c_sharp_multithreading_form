@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "apDlrB9W270DSuF+h5FYasDmu4BhF5d1KWOMf4p5jPiptQiK4OK5jx5WewHkkiAkkTrmO+MpKBazxk7gNhU03A==",
+  "dgSpecHash": "q7CFntdqV8IEPOBFeWmUsuH7FttNBEn5H/p6MzuIyl6DTec/cpWym4UGE0Z5i4LI3IRaCVOI4NYSh70B+DVOtw==",
   "success": true,
   "projectFilePath": "C:\\Users\\melih\\Desktop\\c_sharp_multithreading_form\\MultiThreading.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\melih\\.nuget\\packages\\bogus\\34.0.2\\bogus.34.0.2.nupkg.sha512"
+  ],
   "logs": []
 }
