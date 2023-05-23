@@ -1,0 +1,17 @@
+C:\Users\melih\Desktop\c_sharp_multithreading_form\bin\Debug\net7.0-windows\MultiThreading.exe
+C:\Users\melih\Desktop\c_sharp_multithreading_form\bin\Debug\net7.0-windows\MultiThreading.deps.json
+C:\Users\melih\Desktop\c_sharp_multithreading_form\bin\Debug\net7.0-windows\MultiThreading.runtimeconfig.json
+C:\Users\melih\Desktop\c_sharp_multithreading_form\bin\Debug\net7.0-windows\MultiThreading.dll
+C:\Users\melih\Desktop\c_sharp_multithreading_form\bin\Debug\net7.0-windows\MultiThreading.pdb
+C:\Users\melih\Desktop\c_sharp_multithreading_form\obj\Debug\net7.0-windows\MultiThreading.csproj.AssemblyReference.cache
+C:\Users\melih\Desktop\c_sharp_multithreading_form\obj\Debug\net7.0-windows\MultiThreading.Form1.resources
+C:\Users\melih\Desktop\c_sharp_multithreading_form\obj\Debug\net7.0-windows\MultiThreading.csproj.GenerateResource.cache
+C:\Users\melih\Desktop\c_sharp_multithreading_form\obj\Debug\net7.0-windows\MultiThreading.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\melih\Desktop\c_sharp_multithreading_form\obj\Debug\net7.0-windows\MultiThreading.AssemblyInfoInputs.cache
+C:\Users\melih\Desktop\c_sharp_multithreading_form\obj\Debug\net7.0-windows\MultiThreading.AssemblyInfo.cs
+C:\Users\melih\Desktop\c_sharp_multithreading_form\obj\Debug\net7.0-windows\MultiThreading.csproj.CoreCompileInputs.cache
+C:\Users\melih\Desktop\c_sharp_multithreading_form\obj\Debug\net7.0-windows\MultiThreading.dll
+C:\Users\melih\Desktop\c_sharp_multithreading_form\obj\Debug\net7.0-windows\refint\MultiThreading.dll
+C:\Users\melih\Desktop\c_sharp_multithreading_form\obj\Debug\net7.0-windows\MultiThreading.pdb
+C:\Users\melih\Desktop\c_sharp_multithreading_form\obj\Debug\net7.0-windows\MultiThreading.genruntimeconfig.cache
+C:\Users\melih\Desktop\c_sharp_multithreading_form\obj\Debug\net7.0-windows\ref\MultiThreading.dll
