@@ -64,9 +64,10 @@ namespace MultiThreading
             mailTask.Stop();
         }
 
-        private void btnRunTask_Click(object sender, EventArgs e)
+        private async void btnRunTask_Click(object sender, EventArgs e)
         {
-
+            var mailTask = mailTaskBindingSource.Current as MailTask;
+            await mailTask.Run();
         }
 
         private void btnStartTask_Click(object sender, EventArgs e)

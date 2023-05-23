@@ -46,11 +46,18 @@ namespace MultiThreading
 
         public async Task Run()
         {
+
+            var manager = new MailManager();
+
             while (IsStarted)
             {
                 IsRunning = true;
 
-                // 
+                var smtpMails = FakeDataCreator.GetMails(100);
+
+                manager.AddMails(smtpMails);
+
+                await manager.SendAllMails();
 
                 IsRunning = false;
 
