@@ -1,3 +1,5 @@
+using MultiThreading.Models;
+
 namespace MultiThreading
 {
     public partial class FormMain : Form
@@ -22,25 +24,21 @@ namespace MultiThreading
             lbLogs.SelectedIndex = lbLogs.Items.Count - 1;
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void FormMain_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnListMailTasks_Click(object sender, EventArgs e)
         {
-            var mailTask = new MailTask()
+            var smtpMailTask = new MailTask(MailProviderType.Smtp)
+            {
+                Second = 10
+            };
+
+            var googleMailTask = new MailTask(MailProviderType.GoogleMail)
             {
                 Second = 60
             };
 
             mailTaskBindingSource.Clear();
-            mailTaskBindingSource.Add(mailTask);
+            mailTaskBindingSource.Add(smtpMailTask);
+            mailTaskBindingSource.Add(googleMailTask);
         }
 
         private void mailTaskBindingSource_CurrentItemChanged(object sender, EventArgs e)
@@ -53,11 +51,6 @@ namespace MultiThreading
             btnRunTask.Enabled = mailTask.IsStarted && !mailTask.IsRunning;
         }
 
-        private void mailTaskBindingSource_CurrentChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnStopTask_Click(object sender, EventArgs e)
         {
             var mailTask = mailTaskBindingSource.Current as MailTask;
@@ -67,7 +60,8 @@ namespace MultiThreading
         private async void btnRunTask_Click(object sender, EventArgs e)
         {
             var mailTask = mailTaskBindingSource.Current as MailTask;
-            await mailTask.Run();
+
+            await mailTask.Run(100);
         }
 
         private void btnStartTask_Click(object sender, EventArgs e)

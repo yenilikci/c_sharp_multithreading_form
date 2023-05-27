@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MultiThreading.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -13,6 +14,12 @@ namespace MultiThreading
         private bool isRunning;
         private bool isStarted;
         private DateTime? nextRunning;
+        public MailProviderType ProviderType { get; set; }
+
+        public MailTask(MailProviderType providerType)
+        {
+            ProviderType = providerType;
+        }
 
         public bool IsRunning
         {
@@ -35,8 +42,9 @@ namespace MultiThreading
         public int Second { get; set; } = 60;
         public DateTime? NextRunning
         {
-            get => nextRunning; 
-            set{
+            get => nextRunning;
+            set
+            {
                 nextRunning = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(NextRunning)));
             }
@@ -44,7 +52,7 @@ namespace MultiThreading
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public async Task Run()
+        public async Task Run(int number)
         {
 
             var manager = new MailManager();
@@ -53,9 +61,23 @@ namespace MultiThreading
             {
                 IsRunning = true;
 
-                var smtpMails = FakeDataCreator.GetMails(100);
+                var mails = Enumerable.Empty<MailObject>();
 
-                manager.AddMails(smtpMails);
+                if (ProviderType == MailProviderType.GoogleMail)
+                {
+                    mails = FakeDataCreator.GetGoogleMails(number);
+                }
+                else if (ProviderType == MailProviderType.Smtp)
+                {
+                    mails = FakeDataCreator.GetSmtpMails(number);
+                }
+                else
+                {
+                    mails = FakeDataCreator.GetMails(number);
+                }
+
+
+                manager.AddMails(mails);
 
                 await manager.SendAllMails();
 
